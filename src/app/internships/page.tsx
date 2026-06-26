@@ -3,13 +3,13 @@
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import TopNavBar from "@/components/TopNavBar";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useRouter } from "next/navigation";
 
 export default function Internships() {
   const router = useRouter();
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -19,7 +19,7 @@ export default function Internships() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 80, damping: 20 } },
   };
