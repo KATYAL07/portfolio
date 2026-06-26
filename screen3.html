@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arnav Katyal / About</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#454747",
+                        "inverse-primary": "#c6c6c6",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#cfc4c5",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "on-surface-variant": "#4c4546",
+                        "surface-dim": "#dbdad9",
+                        "on-secondary-container": "#616363",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#efeded",
+                        "tertiary-fixed": "#e2e2e2",
+                        "secondary-container": "#dfe0e0",
+                        "on-background": "#1b1c1c",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "surface-container-low": "#f5f3f3",
+                        "surface-variant": "#e4e2e2",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1b1c1c",
+                        "surface": "#fbf9f8",
+                        "on-secondary-fixed-variant": "#454747",
+                        "secondary-fixed": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e9e8e7",
+                        "primary-fixed": "#e2e2e2",
+                        "outline": "#7e7576",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "tertiary-container": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "secondary": "#5d5f5f",
+                        "on-primary-container": "#848484",
+                        "on-primary-fixed": "#1b1b1b",
+                        "on-tertiary-container": "#838484",
+                        "error": "#ba1a1a",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "background": "#fbf9f8",
+                        "surface-container-highest": "#e4e2e2",
+                        "primary": "#000000",
+                        "surface-tint": "#5e5e5e",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f2f0f0",
+                        "tertiary": "#000000",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-bright": "#fbf9f8",
+                        "inverse-surface": "#303031",
+                        "primary-container": "#1b1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-md": "2rem",
+                        "margin-sm": "1rem",
+                        "grid-dot": "40px",
+                        "gutter": "1.5rem",
+                        "margin-lg": "4rem"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "dot-matrix-display": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"],
+                        "label-mono": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "dot-matrix-display": ["40px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-mono": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            background-image: radial-gradient(theme('colors.on-surface-variant') 1px, transparent 1px);
+            background-size: theme('spacing.grid-dot') theme('spacing.grid-dot');
+            color: theme('colors.on-surface');
+        }
+
+        .scanline {
+            width: 100%;
+            height: 2px;
+            z-index: 50;
+            position: absolute;
+            pointer-events: none;
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.5) 50%, rgba(0,0,0,0.2) 51%, rgba(0,0,0,0));
+            animation: scanline 8s linear infinite;
+        }
+
+        @keyframes scanline {
+            0% { top: 0; }
+            100% { top: 100%; }
+        }
+
+        .dot-matrix-glitch {
+            position: relative;
+        }
+        
+        .dot-matrix-glitch::before,
+        .dot-matrix-glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: theme('colors.background');
+        }
+
+        .dot-matrix-glitch::before {
+            left: 2px;
+            text-shadow: -1px 0 theme('colors.primary');
+            clip: rect(24px, 550px, 90px, 0);
+            animation: glitch-anim-2 3s infinite linear alternate-reverse;
+        }
+
+        .dot-matrix-glitch::after {
+            left: -2px;
+            text-shadow: -1px 0 theme('colors.on-surface-variant');
+            clip: rect(85px, 550px, 140px, 0);
+            animation: glitch-anim 2.5s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% { clip: rect(41px, 9999px, 86px, 0); }
+            20% { clip: rect(65px, 9999px, 12px, 0); }
+            40% { clip: rect(10px, 9999px, 45px, 0); }
+            60% { clip: rect(74px, 9999px, 21px, 0); }
+            80% { clip: rect(32px, 9999px, 90px, 0); }
+            100% { clip: rect(54px, 9999px, 7px, 0); }
+        }
+
+        @keyframes glitch-anim-2 {
+            0% { clip: rect(12px, 9999px, 54px, 0); }
+            20% { clip: rect(76px, 9999px, 32px, 0); }
+            40% { clip: rect(45px, 9999px, 89px, 0); }
+            60% { clip: rect(21px, 9999px, 10px, 0); }
+            80% { clip: rect(90px, 9999px, 65px, 0); }
+            100% { clip: rect(7px, 9999px, 41px, 0); }
+        }
+        
+        .pixel-load {
+            animation: pixelate 0.5s steps(5) forwards;
+        }
+        
+        @keyframes pixelate {
+            0% { filter: blur(10px) contrast(5); }
+            100% { filter: blur(0px) contrast(1); }
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="min-h-screen relative overflow-x-hidden font-body-md text-body-md antialiased selection:bg-primary selection:text-on-primary">
+<div class="scanline"></div>
+<!-- Navigation (Back Button) -->
+<nav class="fixed top-0 w-full z-50 p-margin-md md:p-margin-lg pointer-events-none">
+<a class="inline-flex items-center gap-2 px-4 py-2 border border-primary bg-background/90 backdrop-blur-sm pointer-events-auto hover:bg-primary hover:text-on-primary transition-colors duration-200 group" href="#">
+<span class="material-symbols-outlined text-[18px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span class="font-label-mono text-label-mono uppercase tracking-widest">BACK TO SYSTEM</span>
+</a>
+</nav>
+<main class="pt-32 pb-margin-lg px-margin-md md:px-margin-lg max-w-[1400px] mx-auto min-h-screen flex flex-col justify-center">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Header Section -->
+<div class="lg:col-span-12 mb-12 pixel-load">
+<p class="font-label-mono text-label-mono text-on-surface-variant mb-4 uppercase">SYS.USR.PROFILE // 0x1A4F</p>
+<h1 class="font-dot-matrix-display text-headline-xl md:text-[80px] leading-none mb-4 dot-matrix-glitch uppercase tracking-tighter" data-text="ARNAV KATYAL">
+                    ARNAV KATYAL
+                </h1>
+<p class="font-label-mono text-label-mono uppercase border-b border-primary pb-2 max-w-md">Computer Science Undergraduate</p>
+</div>
+<!-- Main Content Area -->
+<div class="lg:col-span-8 flex flex-col gap-gutter">
+<!-- Bio Panel -->
+<div class="glass-panel border border-surface-variant p-8 md:p-12 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-30">
+<span class="material-symbols-outlined text-[48px]">person</span>
+</div>
+<div class="font-label-mono text-label-mono text-on-surface-variant mb-8 uppercase flex items-center gap-2">
+<div class="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                        01 / IDENTIFICATION_DATA
+                    </div>
+<div class="space-y-6 font-body-lg text-body-lg text-on-surface leading-relaxed max-w-2xl">
+<p>
+                            Initializing biographical sequence... I am Arnav Katyal, an undergraduate student pursuing a degree in Computer Science at Bennett University. My academic journey is driven by a profound fascination with computational systems and architectural design.
+                        </p>
+<p>
+                            Currently operating at the intersection of theoretical algorithms and practical software engineering. My focus centers on developing resilient, scalable systems while exploring the boundaries of modern user interface paradigms. 
+                        </p>
+</div>
+</div>
+<!-- Spec Sheet / Technical Focus -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-surface border border-surface-variant p-6 hover:border-primary transition-colors duration-300">
+<div class="font-label-mono text-label-mono text-on-surface-variant mb-6 uppercase border-b border-surface-variant pb-2">02 / ACADEMIC_NODE</div>
+<div class="space-y-4">
+<div class="flex justify-between items-baseline border-b border-dashed border-surface-variant pb-2">
+<span class="font-label-mono text-label-mono uppercase">Institution</span>
+<span class="font-body-md text-body-md font-medium text-right">Bennett University</span>
+</div>
+<div class="flex justify-between items-baseline border-b border-dashed border-surface-variant pb-2">
+<span class="font-label-mono text-label-mono uppercase">Program</span>
+<span class="font-body-md text-body-md font-medium text-right">B.Tech Computer Science</span>
+</div>
+<div class="flex justify-between items-baseline border-b border-dashed border-surface-variant pb-2">
+<span class="font-label-mono text-label-mono uppercase">Status</span>
+<span class="font-body-md text-body-md font-medium text-right flex items-center gap-2"><span class="w-1.5 h-1.5 bg-green-500 rounded-full inline-block"></span> Active</span>
+</div>
+</div>
+</div>
+<div class="bg-primary text-on-primary p-6">
+<div class="font-label-mono text-label-mono text-on-primary/60 mb-6 uppercase border-b border-on-primary/20 pb-2">03 / CORE_PARAMETERS</div>
+<ul class="space-y-3 font-label-mono text-label-mono">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+                                &gt; DATA_STRUCTURES
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[16px]">code</span>
+                                &gt; ALGORITHM_DESIGN
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[16px]">dns</span>
+                                &gt; SYSTEM_ARCHITECTURE
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[16px]">web</span>
+                                &gt; FRONTEND_ENGINEERING
+                            </li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Sidebar / Visuals -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<!-- Portrait Placeholder -->
+<div class="aspect-[3/4] w-full border border-primary relative overflow-hidden bg-surface-container-high group">
+<div class="absolute inset-0 bg-primary/5 mix-blend-multiply z-10 pointer-events-none"></div>
+<img class="w-full h-full object-cover grayscale contrast-125 filter group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A stark, high-contrast monochrome portrait of a young computer science student, styled with a retro-futuristic glitch aesthetic. The image is composed with dramatic, deep shadows and bright white highlights, evoking a clinical yet cinematic 'tech-noir' atmosphere. A subtle dot-matrix pattern overlays the image, reinforcing the digital hardware theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIjBRnVFjZeyQ8RTF8HsWnQvbE4mqYg1Cs28gYc_XemAsDGfUQADE3v9A7CkxKsM7mmymRfns4sTzj1nqB49U9rRnmyKUqs0BzmJH4K7lQFvXJCbYJnMCUsmXlTCJpCmxTR_acANy5VtTco6vriCzF_wYa8Y1TlxhkOv3rNjQ-mIt2Ei4Vt1zOYFCyjdiZ3HP2u6ibJe_dbFGKqqdDB-6Jh1n2iTln-cBm2K3QPYNAF-utYppV1CID1jcHUfjg3_ZGnPYCPkLQ2hI"/>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-background/80 backdrop-blur-md border-t border-primary z-20 flex justify-between items-center">
+<span class="font-label-mono text-label-mono uppercase">VISUAL_CONFIRMATION</span>
+<span class="material-symbols-outlined">fingerprint</span>
+</div>
+</div>
+<!-- Terminal Output Mockup -->
+<div class="bg-inverse-surface text-inverse-on-surface p-4 border border-outline-variant font-label-mono text-label-mono h-48 overflow-hidden relative">
+<div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-inverse-surface z-10 pointer-events-none"></div>
+<div class="opacity-70 space-y-1" id="terminal-content">
+<div>&gt; connection established</div>
+<div>&gt; fetching user_data...</div>
+<div>&gt; parsing [============] 100%</div>
+<div>&gt; loading neural net...</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Shared Component: Footer (Injected via JSON instruction logic simulation) -->
+<footer class="border-t border-primary dark:border-on-surface bg-background dark:bg-background w-full mt-24">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center px-margin-lg py-12 w-full gap-8 max-w-[1400px] mx-auto">
+<div class="font-dot-matrix-display text-headline-lg text-primary">
+                NOTHING / PORTFOLIO
+            </div>
+<nav class="flex gap-6">
+<a class="font-label-mono text-label-mono text-on-surface-variant dark:text-on-secondary-container hover:text-primary dark:hover:text-on-surface transition-colors duration-100 uppercase" href="#">INDEX</a>
+<a class="font-label-mono text-label-mono underline hover:text-primary dark:hover:text-on-surface transition-colors duration-100 uppercase" href="#">SYSTEM_STATUS</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant dark:text-on-secondary-container hover:text-primary dark:hover:text-on-surface transition-colors duration-100 uppercase" href="#">ENCRYPTED_FEED</a>
+</nav>
+<div class="font-label-mono text-label-mono text-primary dark:text-on-surface">
+                © 2024 TECHNICAL ESSENTIALISM. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+<script>
+        // Simple terminal typing effect
+        const terminalOutput = [
+            "> mem_check: OK",
+            "> cpu_temp: 34C",
+            "> ping arnav.dev ...",
+            "> reply from arnav.dev: bytes=32 time=12ms",
+            "> sequence initiated",
+            "> awaiting input_"
+        ];
+        
+        const terminalContainer = document.getElementById('terminal-content');
+        let lineIndex = 0;
+
+        function addLine() {
+            if (lineIndex < terminalOutput.length) {
+                const line = document.createElement('div');
+                line.textContent = terminalOutput[lineIndex];
+                terminalContainer.appendChild(line);
+                lineIndex++;
+                setTimeout(addLine, Math.random() * 800 + 200);
+            }
+        }
+
+        setTimeout(addLine, 1500);
+    </script>
+</body></html>

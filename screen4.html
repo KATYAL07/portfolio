@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Arnav Katyal - Technical Node</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#5e5e5e",
+                    "surface": "#fbf9f8",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#e2e2e2",
+                    "primary": "#000000",
+                    "on-secondary-container": "#616363",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#e4e2e2",
+                    "on-surface-variant": "#4c4546",
+                    "surface-variant": "#e4e2e2",
+                    "tertiary": "#000000",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-primary-container": "#848484",
+                    "on-background": "#1b1c1c",
+                    "surface-bright": "#fbf9f8",
+                    "background": "#fbf9f8",
+                    "surface-container-high": "#e9e8e7",
+                    "surface-dim": "#dbdad9",
+                    "on-primary-fixed": "#1b1b1b",
+                    "surface-container": "#efeded",
+                    "primary-fixed": "#e2e2e2",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-surface": "#1b1c1c",
+                    "on-tertiary-container": "#838484",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#303031",
+                    "primary-container": "#1b1b1b",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "secondary-fixed-dim": "#c6c6c7",
+                    "secondary-container": "#dfe0e0",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "tertiary-container": "#1a1c1c",
+                    "error": "#ba1a1a",
+                    "secondary": "#5d5f5f",
+                    "surface-container-low": "#f5f3f3",
+                    "on-primary-fixed-variant": "#474747",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "outline-variant": "#cfc4c5",
+                    "outline": "#7e7576",
+                    "on-secondary-fixed-variant": "#454747",
+                    "inverse-primary": "#c6c6c6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-sm": "1rem",
+                    "gutter": "1.5rem",
+                    "grid-dot": "40px",
+                    "margin-lg": "4rem",
+                    "margin-md": "2rem"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Space Grotesk"],
+                    "label-mono": ["JetBrains Mono"],
+                    "headline-xl": ["Space Grotesk"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "dot-matrix-display": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "label-mono": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "dot-matrix-display": ["40px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Nothing Aesthetic Dot Grid Pattern */
+        .dot-grid-bg {
+            background-color: #fbf9f8;
+            background-image: radial-gradient(#d4d4d4 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: center top;
+        }
+
+        .terminal-cursor {
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary selection:text-surface dot-grid-bg min-h-screen flex flex-col">
+<!-- Shared Component: TopNavBar -->
+<nav class="bg-surface/80 dark:bg-background/80 backdrop-blur-xl text-primary dark:text-on-background font-label-mono text-label-mono fixed top-0 w-full border-b border-primary/10 dark:border-on-background/10 flex justify-between items-center px-margin-lg h-20 w-full z-50">
+<div class="font-dot-matrix-display text-dot-matrix-display text-primary dark:text-on-background cursor-pointer">
+            ARNAV KATYAL
+        </div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-primary dark:text-on-background border-b border-primary dark:border-on-background pb-1 cursor-crosshair active:scale-95" href="#">WORK</a>
+<a class="text-secondary dark:text-secondary-fixed opacity-60 hover:opacity-100 hover:text-primary dark:hover:text-on-background transition-all duration-100 cursor-crosshair active:scale-95" href="#">ARCHIVE</a>
+<a class="text-secondary dark:text-secondary-fixed opacity-60 hover:opacity-100 hover:text-primary dark:hover:text-on-background transition-all duration-100 cursor-crosshair active:scale-95" href="#">INFO</a>
+</div>
+<div class="flex space-x-4">
+<button class="text-secondary dark:text-secondary-fixed opacity-60 hover:opacity-100 hover:text-primary dark:hover:text-on-background transition-all duration-100 cursor-crosshair active:scale-95 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="qr_code_2">qr_code_2</span>
+</button>
+<button class="text-secondary dark:text-secondary-fixed opacity-60 hover:opacity-100 hover:text-primary dark:hover:text-on-background transition-all duration-100 cursor-crosshair active:scale-95 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-margin-lg px-margin-sm md:px-margin-lg max-w-7xl mx-auto w-full">
+<!-- Header Section -->
+<header class="mb-16 border-b border-primary/20 pb-8 flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-4 text-secondary font-label-mono text-label-mono uppercase tracking-widest mb-4">
+<span>NODE_ID: INT-01</span>
+<span class="w-12 h-px bg-primary/20"></span>
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        STATUS: COMPLETED
+                    </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary uppercase">Technical Node</h1>
+<h2 class="font-headline-lg text-headline-lg text-secondary">Oasis Infobyte</h2>
+</div>
+<div class="font-label-mono text-label-mono text-right flex flex-col gap-1 text-secondary uppercase">
+<span>ROLE: WEB DEV &amp; UI DESIGN</span>
+<span>TIMEFRAME: FEB 2023 - MAR 2023</span>
+<span>LOC: REMOTE</span>
+</div>
+</header>
+<!-- Spec Sheet Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
+<!-- Context Block -->
+<div class="md:col-span-5 border border-primary/20 bg-surface/80 backdrop-blur-sm p-6 relative group">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+<h3 class="font-label-mono text-label-mono text-primary mb-4 border-b border-primary/10 pb-2">01 // CONTEXT_OVERVIEW</h3>
+<p class="font-body-md text-body-md text-on-surface mb-6">
+                    A multi-phase engagement focusing on developing responsive web architectures and refining user interface paradigms. The objective was to establish robust front-end systems while adhering to strict design system parameters, enhancing both performance and aesthetic coherence.
+                </p>
+<h3 class="font-label-mono text-label-mono text-primary mb-4 border-b border-primary/10 pb-2">02 // TECH_STACK_MATRIX</h3>
+<ul class="flex flex-wrap gap-2 font-label-mono text-label-mono uppercase">
+<li class="border border-primary/20 px-2 py-1">HTML5</li>
+<li class="border border-primary/20 px-2 py-1">CSS3</li>
+<li class="border border-primary/20 px-2 py-1">JavaScript</li>
+<li class="border border-primary/20 px-2 py-1">React</li>
+<li class="border border-primary/20 px-2 py-1">Figma</li>
+</ul>
+</div>
+<!-- Visual Asset Block -->
+<div class="md:col-span-7 border border-primary/20 bg-surface flex items-center justify-center p-2 relative overflow-hidden h-[400px]">
+<div class="absolute top-4 left-4 font-label-mono text-label-mono text-surface bg-primary px-2 py-1 z-10">SYS_DIAGRAM.PNG</div>
+<div class="w-full h-full bg-surface-variant relative grayscale contrast-125 mix-blend-multiply" data-alt="A close-up, highly detailed black and white photograph of abstract mechanical hardware and exposed circuitry. The composition is stark and clinical, echoing a retro-futuristic aesthetic. Sharp focus on metallic textures and precise geometric alignments. The lighting is harsh and directional, creating high-contrast shadows that emphasize the 3D structure. The overall mood is cold, technical, and brutally minimalist." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDiwshFkgijXNl1bR4AGuBY2QE5h0tFjLDU6yKI-zFAyDELAGLCjwsDPV5-WAxq3hZAnxNwMeiZIqCtxuAE1CtN4KE9UKTVp_4A1DWSBmVUD9Hfldag0qdzIwYiCi3ArFhDaoNDkA-uU-eLJt6wB6kxmzh5tsj0tae5Lt6TeVF2m2SshLUF4geN6yEaTQ_RHB2QR2RR5mjTxjbPUs8RbFg4DEbHzgmf6VmpQW--cysC6rEcMBhykiTTilkg6PCWGhlznSAg31MuZpg')"></div>
+</div>
+</div>
+<!-- System Log Terminal -->
+<section class="border border-primary bg-primary text-surface p-6 font-label-mono text-label-mono w-full shadow-lg relative overflow-hidden">
+<!-- Glass reflection effect -->
+<div class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/5 to-transparent pointer-events-none"></div>
+<div class="flex items-center gap-2 mb-6 border-b border-surface/20 pb-4 text-surface/50">
+<span class="material-symbols-outlined text-sm" data-icon="terminal">terminal</span>
+<span>SYSTEM_LOG_EXEC // OASIS_INFOBYTE_TASK_RUNNER</span>
+</div>
+<div class="flex flex-col gap-2 opacity-90 leading-relaxed uppercase">
+<div><span class="text-secondary-fixed">[INIT]</span> SYSTEM BOOT SEQUENCE INITIATED...</div>
+<div><span class="text-secondary-fixed">[INFO]</span> ESTABLISHING CONNECTION TO REPOSITORY... OK.</div>
+<div><span class="text-surface">[EXEC]</span> TASK 01: DEVELOP RESPONSIVE LANDING PAGE ARCHITECTURE.</div>
+<div><span class="text-secondary-fixed pl-4">-&gt;</span> PARSING HTML DOM STRUCTURES...</div>
+<div><span class="text-secondary-fixed pl-4">-&gt;</span> INJECTING CSS GRID/FLEXBOX MODULES...</div>
+<div><span class="text-secondary-fixed pl-4">-&gt;</span> COMPONENT COMPILATION: <span class="text-surface">SUCCESS</span>.</div>
+<div class="mt-2"><span class="text-surface">[EXEC]</span> TASK 02: IMPLEMENT INTERACTIVE JAVASCRIPT LOGIC.</div>
+<div><span class="text-secondary-fixed pl-4">-&gt;</span> BINDING EVENT LISTENERS...</div>
+<div><span class="text-secondary-fixed pl-4">-&gt;</span> OPTIMIZING STATE MANAGEMENT...</div>
+<div class="mt-2"><span class="text-surface">[EXEC]</span> TASK 03: UI DESIGN PROTOYPING.</div>
+<div><span class="text-secondary-fixed pl-4">-&gt;</span> EXPORTING ASSETS FROM FIGMA...</div>
+<div><span class="text-secondary-fixed pl-4">-&gt;</span> ALIGNING TO BRAND ESSENTIALISM GUIDELINES...</div>
+<div class="mt-4 text-surface font-bold border-t border-surface/20 pt-4">
+                    C:\WORK\OASIS&gt; DEPLOYMENT COMPLETE. <span class="terminal-cursor inline-block w-2 h-4 bg-surface align-middle ml-1"></span>
+</div>
+</div>
+</section>
+</main>
+<!-- Shared Component: Footer -->
+<footer class="bg-surface dark:bg-background text-primary dark:text-on-background font-label-mono text-label-mono w-full border-t border-primary dark:border-on-background flex flex-col md:flex-row justify-between items-center px-margin-lg py-margin-sm gap-gutter z-10 relative">
+<div class="font-dot-matrix-display text-dot-matrix-display uppercase">
+            ©2024 ARNAV KATYAL. BUILT ON TECHNICAL ESSENTIALISM.
+        </div>
+<div class="flex gap-8">
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-on-background hover:underline cursor-pointer" href="#">INSTAGRAM</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-on-background hover:underline cursor-pointer" href="#">GITHUB</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-on-background hover:underline cursor-pointer" href="#">READ.CV</a>
+</div>
+</footer>
+</body></html>
